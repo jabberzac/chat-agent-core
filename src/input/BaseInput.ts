@@ -5,7 +5,7 @@ export default class BaseInput extends BaseBotComponent {
         if (!this.bot) return;
         if (this.bot.outputs.length == 0) return;
         for (let plugin of this.bot.plugins) {
-            let reply = await plugin.onChatMessage(message, originator);
+            let reply = await plugin.onChatMessage(message);
             if (reply) {
                 await this.bot.outputs[0].send(reply, originator);
             }
