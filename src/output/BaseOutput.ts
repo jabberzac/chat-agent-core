@@ -1,11 +1,7 @@
-export default class BaseOutput {
-    constructor() {
-        console.log('BaseOutput constructor');
-    }
-    init() {
-        console.log('BaseOutput init');
-    }
-    destroy() {
-        console.log('BaseOutput destroy');
+import BaseBotComponent from "../lib/BaseBotComponent";
+
+export default class BaseOutput extends BaseBotComponent {
+    async send(message: string, originator: any) {
+        throw new Error("Send not implemented");
     }
 }

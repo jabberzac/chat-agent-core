@@ -14,8 +14,6 @@ A platform for developing and testing Chat agents that can connect to multiple e
     "env": {
         "dungarmatic": {
             "type": "discord",
-            "DISCORD_APP_ID": "blah",
-            "DISCORD_PUBLIC_KEY": "blah",
             "DISCORD_TOKEN": "blah"
         }
     },
@@ -30,7 +28,7 @@ A platform for developing and testing Chat agents that can connect to multiple e
                     "type": "discord",
                     "config": {
                         "channels": [
-                            "#discordzac"
+                            "channel-id"
                         ]
                     }
                 }
@@ -42,13 +40,7 @@ A platform for developing and testing Chat agents that can connect to multiple e
             ],
             "plugins": [
                 {
-                    "type": "character",
-                    "config": {
-                        "systemPrompt": "You are a bot. You say things. In character. ok go"
-                    }
-                },
-                {
-                    "type": "magic8ball"
+                    "type": "simple-repeater"
                 }
             ]
         }

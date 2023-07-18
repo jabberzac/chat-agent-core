@@ -1,4 +1,4 @@
-interface EnvironmentDef {
+export declare interface EnvironmentDef {
     [key: string]: string;
 }
 
